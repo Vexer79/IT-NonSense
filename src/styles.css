@@ -20,12 +20,16 @@ a:visited {
     align-items: center;
     padding: 20px 30px;
 }
-.header nav ul{
+.nav-icon{
+    display: none;
+}
+
+.header nav ul {
     list-style: none;
     display: flex;
     gap: 20px;
 }
-.header nav ul > li a{
+.header nav ul > li a {
     font-size: 1.4em;
 }
 
@@ -73,4 +77,70 @@ main {
 .post-createdAt {
 }
 .post-content {
+}
+
+@media (max-width: 768px) {
+    .navigation {
+        display: none;
+    }
+    .header nav{
+        display: none;
+    }
+    
+    .icon-menu {
+        display: block;
+        z-index: 5;
+        position: relative;
+        width: 40px;
+        height: 25px;
+        cursor: pointer;
+        align-self: center;
+    }
+
+    .icon-menu span,
+    .icon-menu::before,
+    .icon-menu::after {
+        left: 0;
+        position: absolute;
+        height: 15%;
+        width: 100%;
+        transition: all 0.3s ease 0s;
+        background-color: white;
+    }
+
+    .icon-menu> {
+        background-color: white;
+    }
+
+    .icon-menu::before,
+    .icon-menu::after {
+        content: "";
+    }
+
+    .icon-menu::before {
+        top: 0;
+    }
+
+    .icon-menu::after {
+        bottom: 0;
+    }
+
+    .icon-menu span {
+        top: 50%;
+        transform: scale(1) translate(0px, -50%);
+    }
+
+    .icon-menu._active span {
+        transform: scale(0) translate(0px, -50%);
+    }
+
+    .icon-menu._active::before {
+        top: 50%;
+        transform: rotate(-45deg) translate(0px, -50%);
+    }
+
+    .icon-menu._active::after {
+        bottom: 50%;
+        transform: rotate(45deg) translate(0px, 50%);
+    }
 }

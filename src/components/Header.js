@@ -7,6 +7,9 @@ export default function Header() {
             <div className="logo">
                 <h1>IT-Нісенітниця</h1>
             </div>
+            <div className="icon-menu">
+                <span></span>
+            </div>
             <nav>
                 <ul>
                     <li>
