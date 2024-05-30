@@ -1,0 +1,76 @@
+a,
+a:visited {
+    color: white;
+    text-decoration: none;
+}
+
+.App {
+    background-color: #181e2c;
+    width: 100%;
+    height: 100dvh;
+}
+
+.header {
+    background-color: #171717;
+    width: 100%;
+    font-family: monospace;
+    color: white;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 20px 30px;
+}
+.header nav ul{
+    list-style: none;
+    display: flex;
+    gap: 20px;
+}
+.header nav ul > li a{
+    font-size: 1.4em;
+}
+
+.footer {
+    width: 100%;
+    height: 100px;
+    background-color: #171717;
+}
+.nav-title {
+    text-align: center;
+}
+main {
+    display: flex;
+    min-height: 80%;
+}
+
+.posts-container {
+    color: white;
+    width: 100%;
+    background-color: #181e2c;
+    padding: 10px;
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+}
+
+.post {
+    background-color: gray;
+    min-height: 50px;
+    width: 100%;
+    padding: 10px;
+}
+.navigation {
+    width: 30%;
+    background-color: darkgray;
+}
+.post-title {
+}
+.post-creator {
+    display: flex;
+    gap: 10px;
+}
+.post-author {
+}
+.post-createdAt {
+}
+.post-content {
+}
