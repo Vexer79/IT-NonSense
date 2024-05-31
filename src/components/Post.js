@@ -1,20 +1,10 @@
-import React, { useState, useEffect } from "react";
+import React from "react";
 import "../styles.css";
 
-export default function Post() {
-    const [post, setPost] = useState([]);
-    useEffect(() => {
-        const testObject = {
-            title: "Title",
-            content: "Test Content",
-            author: "Vexer69",
-            createdAt: new Date().toISOString(),
-        };
-        setPost([testObject, testObject, testObject, testObject, testObject, testObject]);
-    }, []);
+export default function Post({posts}) {
     return (
         <div className="posts-container">
-            {post.map((post) => (
+            {posts.map((post) => (
                 <div className="post">
                     <h3 className="post-title">{post.title}</h3>
                     <p className="post-content">{post.content}</p>
