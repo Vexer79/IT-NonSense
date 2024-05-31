@@ -1,14 +1,14 @@
 import React from "react";
 import "../css/Header.css";
-import { Link} from "react-router-dom";
+import { Link } from "react-router-dom";
 
 export default function Header() {
     return (
         <header className="header">
             <div className="logo">
-                <h1>
-                    <Link to="/">IT-Нісенітниця</Link>
-                </h1>
+                <Link to="/">
+                    <h1>IT-Нісенітниця</h1>
+                </Link>
             </div>
             <div className="icon-menu">
                 <span></span>
