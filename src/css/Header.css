@@ -1,5 +1,5 @@
 .header {
-    background-color: #171717;
+    background-color: #242039;
     width: 100%;
     font-family: monospace;
     color: white;
@@ -11,6 +11,9 @@
 .logo{
     padding: 2px 0;
 }
+.logo h1{
+    font-size: 2rem;
+}
 .nav-icon {
     display: none;
 }
@@ -21,7 +24,7 @@
     gap: 20px;
 }
 .header nav ul > li a {
-    font-size: 1.4em;
+    font-size: 1.5em;
 }
 
 .header nav ul > li {

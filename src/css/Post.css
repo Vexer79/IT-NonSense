@@ -1,29 +1,32 @@
-.posts-container {
-    color: white;
-    width: 100%;
-    background-color: #181e2c;
-    padding: 10px;
-    display: flex;
-    flex-direction: column;
-    gap: 10px;
-}
-
 .post {
-    background-color: gray;
-    min-height: 50px;
+    background-color: #534F73;
+    border: solid 1px white;
+    border-radius: 15px;
     width: 100%;
-    padding: 10px;
+    padding: 20px;
 }
-
+.post-header{
+    display: flex;
+    justify-content: space-between;
+    padding-bottom: 5px;
+}
 .post-title {
+    font-size: 1.45rem;
+    padding-left: 20px;
 }
 .post-creator {
     display: flex;
     gap: 10px;
 }
 .post-author {
+    font-size: 1rem;
 }
 .post-createdAt {
+    font-size: 1rem;
 }
 .post-content {
+    font-size: 1.2rem;
+}
+.post-content::first-letter{
+    padding-left: 20px;
 }

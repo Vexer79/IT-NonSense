@@ -1,4 +1,5 @@
 import "./css/styles.css";
+import "./css/App.css";
 import { BrowserRouter as Router, Route, Routes } from "react-router-dom";
 import { useState, useEffect } from "react";
 import Blog from "./components/Blog";
@@ -13,8 +14,9 @@ function App() {
     const [posts, setPost] = useState([]);
     useEffect(() => {
         const testObject = {
-            title: "Title",
-            content: "Test Content",
+            title: "New Patch",
+            content:
+                "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed mattis lorem ex, et vulputate magna dignissim ut. Nam et placerat tortor, eget ullamcorper justo. Quisque rutrum lacus et elit gravida, ut scelerisque mauris lobortis. Morbi varius nisl a hendrerit condimentum. Etiam mollis facilisis vestibulum. Donec erat tellus, accumsan et molestie ac, tempor ac neque. Interdum et malesuada fames ac ante ipsum primis in faucibus. Nunc feugiat eu lectus in pulvinar. Aliquam erat volutpat. Curabitur arcu mi, dapibus a consectetur eu, bibendum nec turpis.",
             author: "Vexer69",
             createdAt: new Date().toISOString(),
         };
@@ -28,9 +30,9 @@ function App() {
                     <Route path="/projects" element={<Projects />}></Route>
                     <Route path="/games" element={<Games />}></Route>
                     <Route path="/about" element={<About />}></Route>
+                    <Route path="*" element={<NotFound />} />
                 </Route>
                 <Route path="/game/test" element={<Game />}></Route>
-                <Route path="*" element={<NotFound />} />
             </Routes>
         </Router>
     );
