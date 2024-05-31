@@ -1,11 +1,14 @@
 import React from "react";
 import "../styles.css";
+import { Link} from "react-router-dom";
 
 export default function Header() {
     return (
         <header className="header">
             <div className="logo">
-                <h1>IT-Нісенітниця</h1>
+                <h1>
+                    <Link to="/">IT-Нісенітниця</Link>
+                </h1>
             </div>
             <div className="icon-menu">
                 <span></span>
@@ -13,13 +16,13 @@ export default function Header() {
             <nav>
                 <ul>
                     <li>
-                        <a href="">Projects</a>
+                        <Link to="/projects">Projects</Link>
                     </li>
                     <li>
-                        <a href="">Games</a>
+                        <Link to="/games">Games</Link>
                     </li>
                     <li>
-                        <a href="">About</a>
+                        <Link to="/about">About</Link>
                     </li>
                 </ul>
             </nav>
