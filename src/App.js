@@ -14,7 +14,7 @@ function App() {
     const [posts, setPost] = useState([]);
     useEffect(() => {
         const testObject = {
-            title: "New Patch",
+            title: "New Patch ",
             content:
                 "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed mattis lorem ex, et vulputate magna dignissim ut. Nam et placerat tortor, eget ullamcorper justo. Quisque rutrum lacus et elit gravida, ut scelerisque mauris lobortis. Morbi varius nisl a hendrerit condimentum. Etiam mollis facilisis vestibulum. Donec erat tellus, accumsan et molestie ac, tempor ac neque. Interdum et malesuada fames ac ante ipsum primis in faucibus. Nunc feugiat eu lectus in pulvinar. Aliquam erat volutpat. Curabitur arcu mi, dapibus a consectetur eu, bibendum nec turpis.",
             author: "Vexer69",

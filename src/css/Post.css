@@ -1,11 +1,16 @@
 .post {
-    background-color: #534F73;
-    border: solid 1px white;
+    background-color: #534f73;
+    border: solid 3px #33344c;
     border-radius: 15px;
     width: 100%;
     padding: 20px;
+    transition: all ease 0.35s;
 }
-.post-header{
+.post:hover {
+    border: solid 3px white;
+    cursor: pointer;
+}
+.post-header {
     display: flex;
     justify-content: space-between;
     padding-bottom: 5px;
@@ -14,19 +19,45 @@
     font-size: 1.45rem;
     padding-left: 20px;
 }
-.post-creator {
+.post-creator{
     display: flex;
-    gap: 10px;
+    flex-wrap: wrap;
+    column-gap: 5px;
+    align-self: center;
+    justify-content: flex-end;
 }
-.post-author {
-    font-size: 1rem;
-}
+.post-author,
 .post-createdAt {
+    display: inline-block;
     font-size: 1rem;
+    text-align: right;
 }
 .post-content {
     font-size: 1.2rem;
 }
-.post-content::first-letter{
+.post-content::first-letter {
     padding-left: 20px;
+}
+
+@media (max-width: 768px) {
+    .post-header{
+        display: block;
+    }
+    .post-title{
+        text-align: left;
+        padding-left: 0;
+    }
+    .post-title::first-letter{
+        padding-left: 20px;
+    }
+    .post-creator{
+        padding: 3px 0 3px 0;
+    }
+    .post-author,
+    .post-createdAt {
+        display: block;
+        float: none;
+        width: 100%;
+        text-align: left;
+    }
 }
