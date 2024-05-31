@@ -1,15 +1,13 @@
-import "./ad.css";
-import "./styles.css";
-import Ad from "./components/Ad";
-import Header from "./components/Header";
-import Navigation from "./components/Navigation";
+import "./css/styles.css";
+import { BrowserRouter as Router, Route, Routes } from "react-router-dom";
+import { useState, useEffect } from "react";
+import Blog from "./components/Blog";
+import Game from "./components/Game";
 import Post from "./components/Post";
-import Footer from "./components/Footer";
-import { BrowserRouter as Router, Route, Routes} from "react-router-dom";
 import Projects from "./components/Projects";
 import Games from "./components/Games";
 import About from "./components/About";
-import { useState, useEffect } from "react";
+import NotFound from "./components/NotFound";
 
 function App() {
     const [posts, setPost] = useState([]);
@@ -22,24 +20,19 @@ function App() {
         };
         setPost([testObject, testObject, testObject, testObject, testObject, testObject]);
     }, []);
-
     return (
-        <div className="App">
-            <Router>
-                <Header posts={posts}></Header>
-                <main>
-                    <Navigation></Navigation>
-                    <Routes>
-                        <Route path="/" element={<Post posts={posts} />}></Route>
-                        <Route path="/projects" element={<Projects />}></Route>
-                        <Route path="/games" element={<Games />}></Route>
-                        <Route path="/about" element={<About />}></Route>
-                    </Routes>
-                </main>
-                <Ad></Ad>
-                <Footer></Footer>
-            </Router>
-        </div>
+        <Router>
+            <Routes>
+                <Route path="/" element={<Blog />}>
+                    <Route path="/" element={<Post posts={posts} />}></Route>
+                    <Route path="/projects" element={<Projects />}></Route>
+                    <Route path="/games" element={<Games />}></Route>
+                    <Route path="/about" element={<About />}></Route>
+                </Route>
+                <Route path="/game/test" element={<Game />}></Route>
+                <Route path="*" element={<NotFound />} />
+            </Routes>
+        </Router>
     );
 }
 

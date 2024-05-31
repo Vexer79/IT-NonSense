@@ -1,4 +1,5 @@
 import React from "react";
+import "../css/Ad.css";
 
 export default function Ad() {
     return (
