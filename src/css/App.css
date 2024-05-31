@@ -26,6 +26,9 @@ main{
 }
 
 @media (max-width: 768px) {
+    main{
+        padding: 0;
+    }
     .container-title{
         padding: 0;
         margin: 0 auto;
