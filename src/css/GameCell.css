@@ -1,0 +1,27 @@
+.game {
+    transition: all ease 0.25s;
+    border: solid 3px transparent;
+    padding: 5px;
+    border-radius: 5px;
+    align-self: flex-start;
+}
+.game:hover {
+    cursor: pointer;
+    scale: 1.07;
+    -webkit-box-shadow: 0px 0px 10px 1px rgba(0, 0, 0, 0.74);
+    -moz-box-shadow: 0px 0px 10px 1px rgba(0, 0, 0, 0.74);
+    box-shadow: 0px 0px 10px 1px rgba(0, 0, 0, 0.74);
+}
+.game-title {
+    padding: 5px 0;
+    font-size: 1.5rem;
+    width: 250px;
+}
+.game-image {
+    width: 250px;
+    height: 250px;
+    border-radius: 5px;
+}
+
+.game-image:hover {
+}
