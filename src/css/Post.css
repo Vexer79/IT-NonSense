@@ -1,3 +1,4 @@
+@import url("https://fonts.googleapis.com/css2?family=Pixelify+Sans:wght@400..700&display=swap");
 .post {
     background-color: #534f73;
     border: solid 3px #33344c;
@@ -5,6 +6,17 @@
     width: 100%;
     padding: 20px;
     transition: all ease 0.35s;
+}
+
+.post.minecraft {
+    border: solid 30px transparent;
+    border-image: url("../../public/image/terraria.png") 40 round;
+    font-family: "Pixelify Sans";
+    padding: 0;
+}
+.post.minecraft:hover {
+    border: solid 30px transparent;
+    border-image: url("../../public/image/terraria.png") 40 round;
 }
 .post:hover {
     border: solid 3px white;
@@ -19,7 +31,7 @@
     font-size: 1.45rem;
     padding-left: 20px;
 }
-.post-creator{
+.post-creator {
     display: flex;
     flex-wrap: wrap;
     column-gap: 5px;
@@ -40,17 +52,17 @@
 }
 
 @media (max-width: 768px) {
-    .post-header{
+    .post-header {
         display: block;
     }
-    .post-title{
+    .post-title {
         text-align: left;
         padding-left: 0;
     }
-    .post-title::first-letter{
+    .post-title::first-letter {
         padding-left: 20px;
     }
-    .post-creator{
+    .post-creator {
         padding: 3px 0 3px 0;
     }
     .post-author,

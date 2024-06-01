@@ -6,7 +6,7 @@ export default function Post({ posts }) {
         <div className="container">
             <h2 className="container-title">News</h2>
             {posts.map((post) => (
-                <div className="post">
+                <div className={`post${post.game ? " " + post.game : ""}`}>
                     <div className="post-header">
                         <h3 className="post-title">{post.title}</h3>
                         <div className="post-creator">
